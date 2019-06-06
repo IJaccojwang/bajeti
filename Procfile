@@ -1,0 +1,1 @@
+web: gunicorn bajeti.wsgi --log-file -
