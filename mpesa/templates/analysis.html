@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+{% block content %}
+<p>{{statement.month}}</p>
+
+
+<h1>Usage</h1>
+<div id="donutchart_main" style="width: 900px; height: 500px;"></div>
+<h1>Summary</h1>
+<div id="donutchart" style="width: 900px; height: 500px;"></div>
+
+<h1>Withdrawal</h1>
+<div id="donutchart1" style="width: 900px; height: 500px;"></div>
+
+
+<h1>Paybill</h1>
+<div id="donutchart2" style="width: 900px; height: 500px;"></div>
+{% endblock %}
+
+{% block scripts %}
+{{block.super}}
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Payment', 'Amount'],
+          ['Airtime',     ({{airtime}}) ],
+          ['Food',      ({{food}}) ],
+          ['Supermarket',  ({{sup}}) ],
+          ['Uncategorized', ({{uncat}}) ],
+        ]);
+
+        var options = {
+          title: '{{statement.month}} Expenditure',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart_main'));
+        chart.draw(data, options);
+      }
+</script>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Payment', 'Amount'],
+          ['Sent',     ({{sent}}) ],
+          ['Received',      ({{received}}) ],
+          ['Deposited',  ({{deposited}}) ],
+          ['Withdrawn', ({{withdrawn}}) ],
+          ['Pay Bill',    ({{paybill}}) ],
+          ['Buy Goods',      ({{buy_goods}}) ],
+          ['Others',  ({{others}}) ],
+        ]);
+
+        var options = {
+          title: '{{statement.month}} Expenditure',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+</script>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Payment', 'Amount'],
+          ['Total_withdrawn',     ({{withdrawn2}})],
+          ['Charges',      ({{charges_w}})],
+        ]);
+
+        var options = {
+          title: '{{statement.month}} Expenditure',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
+        chart.draw(data, options);
+      }
+</script>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Payment', 'Amount'],
+          ['Paid out',     ({{payments}})],
+          ['Charges',      ({{charges_p}})],
+        ]);
+
+        var options = {
+          title: '{{statement.month}} Expenditure',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
+        chart.draw(data, options);
+      }
+</script>
+ 
+{% endblock %}

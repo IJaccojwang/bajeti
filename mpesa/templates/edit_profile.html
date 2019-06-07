@@ -1,7 +1,5 @@
 {% extends 'base.html'%}
 {%load bootstrap3%}
-
-
 {% block content %}
 {{block.super}}
 <div class="container-fluid">
@@ -14,9 +12,9 @@
       </div>
       <div class="col-md-4">
           <div class="card border-primary">
-              <div class="card-header">Upload statement</div>
+              <div class="card-header">Edit Profile</div>
               <div class="card-body text-primary">
-                  <form  method="post" action="{%url 'index'%}" enctype="multipart/form-data">
+                  <form  method="post" action="{%url 'edit'%}" enctype="multipart/form-data">
                     {% csrf_token %}
                     {%bootstrap_form form%}
                     <div class="form-group w3-center">
@@ -30,13 +28,6 @@
       <div class="col-md-4">
         
       </div>
-    </div>
-    <div class="row">
-        {% for statement in statements %}
-        <p>{{statement.month}}</p>
-        <a href="/media/{{statement.statement}}">Preview</a>
-        <a href="/analyze/{{statement.pk}}">Anlayze</a>
-        {% endfor %}
     </div>
   </div>
 {{form.media}}
