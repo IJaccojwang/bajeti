@@ -4,40 +4,152 @@
 
 {% block content %}
 {{block.super}}
-<div class="container-fluid">
-    <br>
-    <br>
-    
-    <div class="row">
-      <div class="col-md-4">
+<div class="container">
   
+    <div class="row">
+      <!-- Jumbotron -->
+      <div class="card card-image" style="background-image: url(http://www.studiorbd.pro/wp-content/uploads/2018/03/corporate_finance.jpg);">
+        <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+          <div class="py-5">
+
+            <!-- Content -->
+            <h1 class="h1 orange-text"><i class="fas fa-hand-holding-usd"></i> BAJETI</h1>
+            <h2 class="card-title h2 my-4 py-2">Jumbotron with image overlay</h2>
+            <p class="mb-4 pb-2 px-md-5 mx-md-5">Bajeti aims to provide mobile money and online banking users a simple way to track their expenditure. It's as simple as upload, analyze and get your results</p>
+            <a class="btn btn-indigo"><i class="fas fa-clone left"></i> Our services</a>
+
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-          <div class="card border-primary">
-              <div class="card-header">Upload statement</div>
-              <div class="card-body text-primary">
-                  <form  method="post" action="{%url 'index'%}" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {%bootstrap_form form%}
-                    <div class="form-group w3-center">
-                      <input type="submit" class=" w3-center w3-margin w3-button w3-theme-d5" value="Post">
-                    </div>
-                    <input type="hidden" name="next" value="{{next}}">
-                  </form>
+    </div>
+    <br>
+    <div class="row">
+      <div class="jumbotron text-center hoverable p-4">
+        <div class="row">
+          <div class="col-md-4 offset-md-1 mx-3 my-3">
+            <div class="view overlay">
+              <div class="card border-success">
+                <div class="card-header">Upload MPESA Statement</div>
+                <div class="card-body text-primary">
+                    <form  method="post" action="{%url 'index'%}" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      {%bootstrap_form form%}
+                      <div class="form-group w3-center">
+                        <input type="submit" class=" w3-center w3-margin w3-button w3-theme-d5 btn btn-succes" value="Post">
+                      </div>
+                      <input class="btn btn-success" type="hidden" name="next" value="{{next}}">
+                    </form>
+                </div>
               </div>
             </div>
-      </div>
-      <div class="col-md-4">
-        
+
+          </div>
+          <div class="col-md-7 text-md-left ml-3 mt-3">
+            <a href="#!" class="green-text">
+              <h2 class="h2 pb-1"><i class="fas fa-desktop pr-1"></i>M-pesa</h2>
+            </a>
+
+            <h4 class="h4 mb-4">Upload Mpesa statements here</h4>
+
+            <p class="font-weight-normal">Once you upload your statement, you will get a summary of all your expenses and mobile money use for the specific month.</p>
+
+            {% for statement in statements %}
+            <a  class="btn btn-outline-success" >{{statement.month}}</a>
+            <a  class="btn btn-success" href="/media/{{statement.statement}}">Preview</a>
+            <a  class="btn btn-success" href="/analyze/{{statement.pk}}">Anlayze</a>
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </div>
+    <br>
     <div class="row">
-        {% for statement in statements %}
-        <p>{{statement.month}}</p>
-        <a href="/media/{{statement.statement}}">Preview</a>
-        <a href="/analyze/{{statement.pk}}">Anlayze</a>
-        {% endfor %}
+      <div class="jumbotron text-center hoverable p-4">
+        <div class="row">
+          <div class="col-md-4 offset-md-1 mx-3 my-3">
+            <div class="view overlay">
+              <div class="card border-warning">
+                <div class="card-header">Upload MPESA Statement</div>
+                <div class="card-body text-primary">
+                    <form  method="post" action="{%url 'index'%}" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      {%bootstrap_form form%}
+                      <div class="form-group w3-center">
+                        <input type="submit" class=" w3-center w3-margin w3-button w3-theme-d5 btn btn-succes" value="Post">
+                      </div>
+                      <input class="btn btn-success" type="hidden" name="next" value="{{next}}">
+                    </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-7 text-md-left ml-3 mt-3">
+            <a href="#!" class="amber-text">
+              <h2 class="h2 pb-1"><i class="fas fa-desktop pr-1"></i>Equity Bank</h2>
+            </a>
+
+            <h4 class="h4 mb-4">Upload Equity Bank statements here</h4>
+
+            <p class="font-weight-normal">Once you upload your statement, you will get a summary of all your expenses and mobile money use for the specific month.</p>
+
+            {% for equity in equities %}
+            <a  class="btn btn-outline-warning" >{{equity.month}}</a>
+            <a  class="btn btn-outline-warning" href="/media/{{equity.statement}}">Preview</a>
+            <a  class="btn btn-outline-warning" href="/analyze/{{equity.pk}}">Anlayze</a>
+            {% empty %}
+            <a  class="btn btn-outline-warning" >Nothing uploaded</a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
     </div>
+    <br>
+    <div class="row">
+      <div class="jumbotron text-center hoverable p-4">
+        <div class="row">
+          <div class="col-md-4 offset-md-1 mx-3 my-3">
+            <div class="view overlay">
+              <div class="card border-info">
+                <div class="card-header">Upload MPESA Statement</div>
+                <div class="card-body text-primary">
+                    <form  method="post" action="{%url 'index'%}" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      {%bootstrap_form form%}
+                      <div class="form-group w3-center">
+                        <input type="submit" class=" w3-center w3-margin w3-button w3-theme-d5 btn btn-succes" value="Post">
+                      </div>
+                      <input class="btn btn-info" type="hidden" name="next" value="{{next}}">
+                    </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-7 text-md-left ml-3 mt-3">
+            <a href="#!" class="light-blue-text">
+              <h2 class="h2 pb-1"><i class="fas fa-desktop pr-1"></i>Barclays Bank</h2>
+            </a>
+
+            <h4 class="h4 mb-4">Upload Barclays Bank statements here</h4>
+
+            <p class="font-weight-normal">Once you upload your statement, you will get a summary of all your expenses and mobile money use for the specific month.</p>
+
+            {% for equity in equities %}
+            <a  class="btn btn-outline-info" >{{equity.month}}</a>
+            <a  class="btn btn-outline-info" href="/media/{{equity.statement}}">Preview</a>
+            <a  class="btn btn-outline-info" href="/analyze/{{equity.pk}}">Anlayze</a>
+            {% empty %}
+            <a  class="btn btn-outline-info" >Nothing uploaded</a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
   </div>
 {{form.media}}
 {%endblock%}

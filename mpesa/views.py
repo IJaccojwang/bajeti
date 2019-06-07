@@ -48,13 +48,17 @@ def edit_profile(request):
 
 @login_required(login_url='/accounts/login')
 def analyze(request, statement_id):
+    current_user = request.user
     try:
         statement = Statement.objects.get(id = statement_id)
+        profile =Profile.objects.get(user=current_user)
     except ObjectDoesNotExist:
         raise Http404
     
     convert(statement.statement.url)
-    context = {'received':received, 
+    context = {'statement':statement,
+    'profile':profile,
+    'received':received, 
     'sent':sent,
     'deposited':deposited,
     'withdrawn':withdrawn,

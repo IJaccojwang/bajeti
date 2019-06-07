@@ -1,0 +1,65 @@
+TRANSACTION TYPE,PAID IN,PAID OUT
+SEND MONEY:,0.00,0.00
+RECEIVED MONEY:,"11,000.00",0.00
+AGENT DEPOSIT,0.00,0.00
+AGENT WITHDRAWAL:,0.00,"9,226.00"
+LIPA NA M-PESA (PAYBILL):,0.00,"2,307.00"
+LIPA NA M-PESA (BUY GOODS):,0.00,"2,718.00"
+OTHERS:,"4,000.00",920.00
+TOTAL,"15,000.00","15,171.00"
+Receipt No.,Completion Time,Details,Transaction,Paid In,Withdrawn,Balance
+NDU5L6OVLR,2019-04-30 13:17:51,Withdrawal Charge,Completed,-27.00,5.00
+NDU5L6OVLR,2019-04-30 13:17:51,Customer Withdrawal At Agent Till 423104 - Jemshan,Completed,-500.00,32.00
+NDT1K9T913,2019-04-29 11:00:35,Funds received from 0708898890 - HUSSEIN FUAAD,Completed,500.00,532.00
+NDR7IOEH8V,2019-04-27 10:28:41,Airtime Purchase,Completed,-20.00,32.00
+NDR0IO6FKW,2019-04-27 10:21:06,Withdrawal Charge,Completed,-28.00,52.00
+NDR0IO6FKW,2019-04-27 10:21:06,Customer Withdrawal At Agent Till 821019 - Yu-me,Completed,"-1,000.00",80.00
+NDR0IKQ6E6,2019-04-27 08:02:49,Funds received from 254717555393 - DOROTHY,Completed,500.00,"1,080.00"
+NDP8HNCDBM,2019-04-25 21:12:08,Funds received from 254717555393 - DOROTHY,Completed,400.00,580.00
+NDO6GE1QNG,2019-04-24 13:19:28,Funds received from 0717553781 - VICTOR KIPRONO,Completed,50.00,180.00
+NDO6G9A97A,2019-04-24 10:22:12,Pay Bill Charge,Completed,-34.00,130.00
+NDO6G9A97A,2019-04-24 10:22:12,Pay Bill Online to 530100 - JAMBOPAY Acc. M792191,Completed,"-2,100.00",164.00
+NDO2G99EF4,2019-04-24 10:21:14,Funds received from 0708898890 - HUSSEIN FUAAD,Completed,400.00,"2,264.00"
+NDO7G9565L,2019-04-24 10:16:31,Funds received from 254723664061 - JOAN MURUGI,Completed,"1,800.00","1,864.00"
+NDL3E3SFZN,2019-04-21 12:08:26,Withdrawal Charge,Completed,-27.00,64.00
+NDL3E3SFZN,2019-04-21 12:08:26,Customer Withdrawal At Agent Till 342858 - Meadews,Completed,-300.00,91.00
+NDL3E3RBA3,2019-04-21 12:07:10,Funds received from 254717555393 - DOROTHY,Completed,350.00,391.00
+NDL5E3CH8V,2019-04-21 11:49:38,Withdrawal Charge,Completed,-27.00,41.00
+NDL5E3CH8V,2019-04-21 11:49:38,Customer Withdrawal At Agent Till 342858 - Meadews,Completed,-150.00,68.00
+NDK4DV20GW,2019-04-20 21:59:38,Airtime Purchase,Completed,-150.00,218.00
+NDJ1CRWHJJ,2019-04-19 17:35:49,Airtime Purchase,Completed,-200.00,368.00
+NDJ9COWREZ,2019-04-19 16:05:08,Airtime Purchase,Completed,-200.00,568.00
+NDI0C7V08M,2019-04-18 22:17:54,Airtime Purchase,Completed,-100.00,768.00
+NDH3ALQ61T,2019-04-17 05:52:46,Airtime Purchase,Completed,-50.00,868.00
+NDF29H56ZA,2019-04-15 18:15:21,Withdrawal Charge,Completed,-28.00,918.00
+NDF29H56ZA,2019-04-15 18:15:21,Customer Withdrawal At Agent Till 423100 - Jemshan,Completed,"-1,300.00",946.00
+NDE48SZOJA,2019-04-14 20:09:30,Business Payment from 300600 - Equity Bulk Account,Completed,"1,000.00","2,246.00"
+NDD0831R0Q,2019-04-13 21:08:03,Merchant Payment to 131053 - LIPET ENTERPRISES,Completed,-600.00,"1,246.00"
+NDD682XSLO,2019-04-13 21:03:44,Business Payment from 300600 - Equity Bulk Account,Completed,"1,000.00","1,846.00"
+NDC579MOBR,2019-04-12 23:05:32,Airtime Purchase,Completed,-100.00,846.00
+NDB968DPTN,2019-04-11 19:08:00,Withdrawal Charge,Completed,-28.00,946.00
+NDB968DPTN,2019-04-11 19:08:00,Customer Withdrawal At Agent Till 381088 - Christmond,Completed,"-1,200.00",974.00
+Receipt No.,Completion Time,Details,Transaction,Paid In,Withdrawn,Balance
+NDA95G4UT5,2019-04-10 19:43:53,Business Payment from 300600 - Equity Bulk Account,Completed,"1,000.00","2,174.00"
+NDA74SHRDD,2019-04-10 06:45:28,Withdrawal Charge,Completed,-28.00,"1,174.00"
+NDA74SHRDD,2019-04-10 06:45:28,Customer Withdrawal At Agent Till 474833 - Twin Stars,Completed,"-1,500.00","1,202.00"
+ND903XC5IO,2019-04-09 05:48:19,Airtime Purchase,Completed,-50.00,"2,702.00"
+ND732ZR77P,2019-04-07 21:16:44,Funds received from 254717555393 - DOROTHY,Completed,"2,000.00","2,752.00"
+ND782JIO1Y,2019-04-07 13:23:16,Withdrawal Charge,Completed,-28.00,752.00
+ND782JIO1Y,2019-04-07 13:23:16,Customer Withdrawal At Agent Till 755020 - Danfam,Completed,"-1,000.00",780.00
+ND792J1RIH,2019-04-07 13:05:56,Business Payment from 300600 - Equity Bulk Account,Completed,"1,000.00","1,780.00"
+ND611MQYSP,2019-04-06 12:22:18,Merchant Payment to 871126 - KFC Mama Ngina,Completed,"-1,240.00",780.00
+ND611K5N11,2019-04-06 11:02:11,Funds received from 254717555393 - DOROTHY,Completed,"1,000.00","2,020.00"
+ND601HAM8W,2019-04-06 09:31:36,Funds received from 254723664061 - JOAN MURUGI,Completed,"1,000.00","1,020.00"
+ND47ZFZKZH,2019-04-04 23:00:22,Airtime Purchase,Completed,-50.00,20.00
+ND35YAFAND,2019-04-03 18:09:16,Withdrawal Charge,Completed,-28.00,70.00
+ND35YAFAND,2019-04-03 18:09:16,Customer Withdrawal At Agent Till 423104 - Jemshan,Completed,"-1,700.00",98.00
+ND32Y0TA7C,2019-04-03 13:25:22,Merchant Payment to 515023 - Naivas Ngong,Completed,-298.00,"1,798.00"
+ND30XPWBOK,2019-04-03 05:34:54,Funds received from 254717555393 - DOROTHY,Completed,"2,000.00","2,096.00"
+ND27XEOTST,2019-04-02 18:12:52,Withdrawal Charge,Completed,-27.00,96.00
+ND27XEOTST,2019-04-02 18:12:52,Customer Withdrawal At Agent Till 423104 - Jemshan,Completed,-300.00,123.00
+ND11WPJLKJ,2019-04-01 20:11:59,Merchant Payment to 673045 - MEATERS BUTCHERY,Completed,-400.00,423.00
+ND19WP3HG1,2019-04-01 20:01:18,Merchant Payment to 947792 -PRIZEWORTHY,Completed,-180.00,823.00
+ND10WGFHL4,2019-04-01 16:33:01,Funds received from 254717555393 - DOROTHY,Completed,"1,000.00","1,003.00"
+ND10W051L6,2019-04-01 05:04:51,Pay Bill Charge,Completed,-23.00,3.00
+ND10W051L6,2019-04-01 05:04:51,Pay Bill to 888880 - KPLC PREPAID Acc. 37169129527,Completed,-150.00,26.00

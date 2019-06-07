@@ -3,20 +3,139 @@
 {% load staticfiles %}
 
 {% block content %}
-<p>{{statement.month}}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+              <h1 class="card-title text-center">MPESA {{statement.month}}</h1>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card border-success mb-3">
+          <div class="card-body text-success">
+            <h4 class="card-title text-center" text-center>Transactions</h4>
+            <div id="donutchart"></div>
+            <p class="card-text">Breakdown</p>
+            <table class="table">
+                <thead class="black white-text">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Transaction</th>
+                    <th scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Sent</td>
+                    <td>{{sent}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Received</td>
+                    <td>{{received}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Deposited</td>
+                    <td>{{deposited}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Withdrawn</td>
+                    <td>{{withdrawn}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Pay Bill</td>
+                    <td>{{pay_bill}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Buy Goods</td>
+                    <td>{{buy_goods}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Others</td>
+                    <td>{{others}}</td>
+                  </tr>
+                </tbody>
+              </table>
+          
+              
+          </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card border-success mb-3">
+          <div class="card-body text-success">
+            <h4 class="card-title text-center">Usage</h4>
+            <div id="donutchart_main"></div>
+            <p class="card-text">Breakdown</p>
+            <table class="table">
+                <thead class="black white-text">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Transaction</th>
+                    <th scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Airtime</td>
+                    <td>{{airtime}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Food</td>
+                    <td>{{food}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Supermarket</td>
+                    <td>{{sup}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Uncategorized</td>
+                    <td>{{uncat}}</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+      </div>
+    </div>  
+  </div>
+  <div class="row">
+      <div class="col-md-6">
+        <div class="card border-success mb-3">
+            <div class="card-body text-success">
+              <h4 class="card-title text-center" >Withdrawals</h4>
+              <div id="donutchart1"></div>
+              <p class="card-text">You made {{withdrawals}} withdrawals in the month of {{statement.month}}</p>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card border-success mb-3">
+            <div class="card-body text-success">
+              <h4 class="card-title text-center">Payments</h4>
+              <div id="donutchart2"></div>
+              <p class="card-text">You made {{payments}} payments in the month of {{statement.month}}</p>
+            </div>
+        </div>
+      </div>  
+    </div>
+</div>>
 
-
-<h1>Usage</h1>
-<div id="donutchart_main" style="width: 900px; height: 500px;"></div>
-<h1>Summary</h1>
-<div id="donutchart" style="width: 900px; height: 500px;"></div>
-
-<h1>Withdrawal</h1>
-<div id="donutchart1" style="width: 900px; height: 500px;"></div>
-
-
-<h1>Paybill</h1>
-<div id="donutchart2" style="width: 900px; height: 500px;"></div>
 {% endblock %}
 
 {% block scripts %}
@@ -35,8 +154,8 @@
         ]);
 
         var options = {
-          title: '{{statement.month}} Expenditure',
-          pieHole: 0.4,
+          title: '{{statement.month}} Transactions',
+          is3D: true,
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart_main'));
@@ -62,8 +181,8 @@
         ]);
 
         var options = {
-          title: '{{statement.month}} Expenditure',
-          pieHole: 0.4,
+          title: '{{statement.month}} Usage',
+          is3D: true,
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
@@ -79,13 +198,13 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Payment', 'Amount'],
-          ['Total_withdrawn',     ({{withdrawn2}})],
+          ['Total Withdrawn',     ({{withdrawn2}})],
           ['Charges',      ({{charges_w}})],
         ]);
 
         var options = {
-          title: '{{statement.month}} Expenditure',
-          pieHole: 0.4,
+          title: '{{statement.month}} Withdrawals',
+          is3D: true,
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
@@ -106,8 +225,8 @@
         ]);
 
         var options = {
-          title: '{{statement.month}} Expenditure',
-          pieHole: 0.4,
+          title: '{{statement.month}} Payments',
+          is3D: true,
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
