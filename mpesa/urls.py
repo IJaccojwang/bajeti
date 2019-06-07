@@ -5,6 +5,9 @@ from . import views
 
 urlpatterns=[
     url('^$', views.index, name = 'index'),
+    url(r'^profile$',views.profile,name='profile'),
+    url(r'^profile/edit$',views.edit_profile,name='edit'),
+    url(r'^analyze/(\d+)',views.analyze,name='analyze')
 ]
 
 if settings.DEBUG:
