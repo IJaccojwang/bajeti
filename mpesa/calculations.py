@@ -4,7 +4,7 @@ import csv
 
 
 def convert(conversionfile):
-    tabula.convert_into('.'+ conversionfile, "./media/statements/output.csv", output_format="csv", pages="all")
+    tabula.convert_into('.'+ conversionfile, "./media/statements/output.csv", pages='2', output_format="csv")
 
     with open('./media/statements/output.csv') as in_file:
         reader = csv.reader(in_file)
